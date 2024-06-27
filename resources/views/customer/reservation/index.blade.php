@@ -12,6 +12,7 @@
             <th class="border-b py-1 bg-slate-100">Phone</th>
             <th class="border-b py-1 bg-slate-100">Branch</th>
             <th class="border-b py-1 bg-slate-100">Service</th>
+            <th class="border-b py-1 bg-slate-100">Date</th>
             <th class="border-b py-1 bg-slate-100">Action</th>
         </tr>
     </thead>
@@ -22,6 +23,7 @@
                 <td class="py-2 border-b">{{$reservation->phone}}</td>
                 <td class="py-2 border-b">{{$reservation->branch->name}}</td>
                 <td class="py-2 border-b">{{$reservation->service->name}}</td>
+                <td class="py-2 border-b">{{$reservation->date}}</td>
                 <td class="py-2 border-b">
                     <div class="flex justify-center gap-3">
                         <form action="{{route('reservation.destroy', $reservation)}}" method="post">
